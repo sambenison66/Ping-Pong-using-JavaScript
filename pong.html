@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Name: Samuel Benison  -->
+<!-- Email ID: sambenison66@gmail.com  -->
+<html lang="en">
+  <head>
+    <title>A Pong Game in JavaScript</title>
+    <meta charset="utf-8"/>
+    <style>
+          #court
+          {
+             width: 1100px;
+             height: 600px;
+             border: solid black;
+             position: relative;
+             overflow: hidden;
+          }
+
+          .obj
+          {
+             position: absolute;
+             border: 0px;
+          }
+    </style>
+    <script type="text/javascript" src="pong.js"></script>
+  </head>
+  <body onload="initialize();" onmousemove="movePaddle(event);">
+    <form>
+      <label>Slow<input type="radio" name="speed" value="0" onclick="setSpeed(0);"/></label>
+      <label>Medium<input type="radio" name="speed" value="1" onclick="setSpeed(1);"/></label>
+      <label>Fast<input type="radio" name="speed" value="2" onclick="setSpeed(2);"/></label>
+      <input type="button" value="Reset" onclick="resetCounter();" />
+      <label>Score: <span id="message">0</span></label>
+      <br/>
+      <label> Select a speed and click on the game to play the game</label>
+      <br/>
+      <div id="court" onclick="startGame(event);">
+	       <img id="ball" class="obj" src="http://xxx.com/yyy/ball.gif" />
+	       <img id="paddle" class="obj" src="http://xxx.com/yyy/paddle.gif" style="margin: 0; padding: 0; position: absolute; left: 1050px; top: 250px" />
+      </div>
+    </form>
+  </body>
+</html>
